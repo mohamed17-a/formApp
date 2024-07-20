@@ -1,0 +1,41 @@
+<main class="container">
+    <h1 class="text-center">
+        Form App
+    </h1>
+</main>
+<section class="container">
+    <form>
+        <div class="mb-3">
+          <label for="nameInput" class="form-label">Enter Your Name</label>
+          <input [(ngModel)]="nameInput" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="nameInput" placeholder="Name">
+        @if (nameError) {
+            <div class="alert alert-danger" role="alert">
+                Name accepts characters only ! Name cannot be Empty!            
+            </div>
+        }
+        </div>
+        <div class="mb-3">
+          <label for="Age" class="form-label">Enter Your Age</label>
+          <input type="number" [(ngModel)]="ageInput" [ngModelOptions]="{standalone: true}" class="form-control" id="Age" placeholder="18">
+        </div>
+        @if (ageError) {
+            <div class="alert alert-danger" role="alert">
+                Age must be over or equal to 18.              
+            </div>
+        }
+        <div class="mb-3">
+            <div *ngFor="let phone of phoneNumbers; let i = index">
+                <label for="phone{{i}}"class="form-label">Phone Number {{i + 1}}:</label>
+                <input id="phone{{i}}" name="phoneNumbers{{i}}" [(ngModel)]="phoneNumbers[i]" pattern="^[0-9]+$" class="form-control" placeholder="+201000000000"/>
+                <button type="button" class="btn btn-danger mt-1" (click)="removePhoneNumber(i)">Remove</button>
+            </div>
+            <button type="button" class="btn btn-success mt-1" (click)="addPhoneNumber()">Add Phone Number</button>
+        </div>
+        @if (phoneError) {
+            <div class="alert alert-danger" role="alert">
+                Enter a valid Phone Number            
+            </div>
+        }
+        <button type="submit" class="btn btn-primary mt-3 w-25" (click)="add()">Submit</button>
+    </form>
+</section> 
