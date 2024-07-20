@@ -1,27 +1,16 @@
 # FormApp
+Welcome to the Angular formApp Application, Built using (https://github.com/angular/angular-cli) version 18.1.0., this app leverages the latest web technologies to provide a seamless user experience.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
+## Features
 
-## Development server
+1. Name Input: Accepts letters only.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+2. Age Input: Only accepts ages 18 and above.
 
-## Code scaffolding
+3. Phone Number Input: Accepts numbers only. 
+Allows the addition of more than one number and the ability to remove any number.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Built With
+**Angular**: The latest version of the Angular framework.[More about Angular](https://angular.dev/)
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Bootstrap**: For responsive and attractive UI components.[More about Bootstrap](https://getbootstrap.com/)
